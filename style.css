@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.4;
+}
+
+.resume {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 15mm 17mm;
+    background: #000000;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 33px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* FIRST NAME - ORANGE */
+
+.header h1 .profile_firstName {
+    color: #ff8c00;
+}
+
+/* CONTACT */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+/* LINKS */
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    font-size: 11px;
+}
+
+.links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #ff8c00;
+    text-decoration: underline;
+}
+
+/* SECTIONS */
+
+.section {
+    margin-bottom: 12px;
+}
+
+.section h2 {
+    color: #ff8c00;
+    font-size: 12px;
+    font-weight: 700;
+
+    border-bottom: 1px solid #ff8c00;
+
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+}
+
+/* TEXT */
+
+.section p {
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+/* EDUCATION AND PROJECTS */
+
+.education-item {
+    margin-bottom: 7px;
+}
+
+.project {
+    margin-bottom: 9px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.item-header strong {
+    color: #36a3b9;
+    font-weight: 700;
+}
+
+.item-header span {
+    color: #ffffff;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+/* LISTS */
+
+ul {
+    margin-top: 3px;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 2px;
+    padding-left: 2px;
+}
+
+/* SKILLS */
+
+.skill-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3px;
+}
+
+.skill-row strong {
+    color: #ff8c00;
+    width: 78px;
+    flex-shrink: 0;
+}
+
+.skill-row span {
+    flex: 1;
+}
+
+/* PRINT */
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+
+    body {
+        background: #000000;
+        color: #ffffff;
+    }
+
+    .resume {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 15mm 17mm;
+        background: #000000;
+    }
+
+    .links a {
+        color: #ffffff;
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 800px) {
+
+    body {
+        background: #000000;
+    }
+
+    .resume {
+        width: 100%;
+        min-height: 0;
+        padding: 30px 25px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .item-header {
+        flex-direction: column;
+    }
+
+    .item-header span {
+        margin-left: 0;
+    }
+
+    .skill-row {
+        display: block;
+    }
+
+    .skill-row strong {
+        width: auto;
+        margin-right: 5px;
+    }
+}
